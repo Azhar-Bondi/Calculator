@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+<title>The Best Calculator Ever Existed</title>
+<link rel="stylesheet" href="project.css"/>
+</head>
+
+<body style="background-image: url(https://i.ibb.co/LkxwD5F/galaxy.jpg);">
+    
+<div class="wrapper">
+
+    <h2>" Best Calculator Ever "</h2>
+    <h2>To the Infinity and Beyond</h2>
+    <input type="text" name="num-one" id="num-one">
+    <input type="text" name="num-two" id="num-two">
+    <br><br>
+
+    <input type="radio" name="sign-area" id="boxe1" value="add" checked> <b>+</b>
+    <input type="radio" name="sign-area" id="boxe2" value="subtract"> <b>-</b>
+    <input type="radio" name="sign-area" id="boxe3" value="multiply"> <b>*</b>
+    <input type="radio" name="sign-area" id="boxe4" value="divide"> <b>/</b>
+<br><br>
+
+<button type="button" onclick="outcome()">Yalla Calculate!</button>
+
+<h1 id="resultArea"></h1>
+
+
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+    function outcome() {
+        var x = Number(document.getElementById("num-one").value);
+        var y = Number(document.getElementById("num-two").value);
+        var z = 0;
+    
+        if (document.getElementById("boxe1").checked){
+            z = x + y;
+        }
+    
+        else if(document.getElementById("boxe2").checked){
+            z = x - y;
+        }
+    
+        else if(document.getElementById("boxe3").checked){
+            z = x * y;
+        }
+    
+        else{
+            z = x / y;
+    
+        }
+     document.getElementById("resultArea").innerHTML = "Result = "+String(z);
+    
+    }
+    </script>
+
+</body>
+</html>
+
